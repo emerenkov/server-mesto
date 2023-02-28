@@ -22,16 +22,16 @@ const cardSchema = new Schema<ICards>({
   owner: {
     type: Schema.Types.ObjectId,
     required: true,
-    ref: 'user'
+    ref: 'user',
   },
   likes: {
-    type: [{type: Schema.Types.ObjectId, ref: 'user'}],
-    default: []
+    type: [{ type: Schema.Types.ObjectId, ref: 'user' }],
+    default: [],
   },
   createdAt: {
     type: Date,
     default: Date.now,
-  }
-})
+  },
+});
 
 export default model<ICards>('card', cardSchema);
