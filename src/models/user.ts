@@ -22,7 +22,7 @@ const userSchema = new Schema<IUser>({
   avatar: {
     type: String,
     required: true,
-  }
+  },
 });
 
 export default model<IUser>('user', userSchema);
